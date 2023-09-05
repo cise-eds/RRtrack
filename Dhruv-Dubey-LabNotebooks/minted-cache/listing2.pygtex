@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Setting up software and dependencies}
+jobrunner setup software/amrex
+jobrunner setup software/flashx
+
+\PYG{c+c1}{\PYGZsh{} Setting up and running experiments}
+jobrunner setup simulation/FlowBoiling
+jobrunner submit simulation/FlowBoiling
+
+\PYG{c+c1}{\PYGZsh{} Archiving results to jobnode.archive}
+jobrunner archive \PYG{l+s+se}{\PYGZbs{}}
+            simulation/FlowBoiling
+
+\PYG{c+c1}{\PYGZsh{} Running Flash\PYGZhy{}X test suite}
+jobrunner submit tests
+\end{Verbatim}
